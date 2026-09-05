@@ -394,68 +394,6 @@ You are responsible for complying with applicable laws, regulations, provider po
 
 ---
 
-# Credits
-
-## Author
-
-**outwiles**
-
-GitHub:
-
-https://github.com/outwiles
-
-Repository:
-
-https://github.com/outwiles/sms-bomber
-
-## Open-Source Libraries
-
-This project uses:
-
-- [Requests](https://github.com/psf/requests) — HTTP requests
-- [fake-useragent](https://github.com/fake-useragent/fake-useragent) — User-Agent generation
-- [cfonts](https://github.com/dominikwilkowski/cfonts) — Terminal text rendering
-
-Full dependency information is available in `requirements.txt`.
-
----
-
-# Contributing
-
-Contributions are welcome for legitimate testing, research, reliability, and defensive-security improvements.
-
-To contribute:
-
-```bash
-git clone https://github.com/outwiles/sms-bomber.git
-cd sms-bomber
-```
-
-Create your changes, test them locally, and open a pull request.
-
-Useful contribution areas include:
-
-- Improved error handling
-- Better reporting
-- Safer testing modes
-- Mock SMS providers
-- Performance improvements
-- Cross-platform compatibility
-- Documentation
-- Defensive rate-limit testing
-
----
-
-# License
-
-This project is licensed under the **MIT License**.
-
-See [`LICENSE`](LICENSE) for the complete license text.
-
-Copyright © 2026 **outwiles**
-
----
-
 # Disclaimer
 
 This software is provided **"as is"**, without warranty of any kind.
@@ -466,10 +404,4 @@ Use the software only in environments where you have appropriate authorization.
 
 ---
 
-<div align="center">
 
-### Built by outwiles
-
-⭐ Star the repository if you find it useful for legitimate testing and research.
-
-</div>
