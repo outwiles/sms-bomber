@@ -1,7 +1,7 @@
-📱 SMS/OTP Bomber
+#📱 SMS/OTP Bomber
 
 <div align="center">
-  <img src="bomb/assets/bomb.png" alt="SMS Bomber Logo" width="200"/>
+  <img src="sms-bomber/assets/bomb.png" alt="SMS Bomber Logo" width="200"/>
   <br>
   <p><strong>A lightweight, multi‑threaded SMS & voice OTP bomber with real‑time logging and intelligent rate‑limiting.</strong></p>
   <p>
