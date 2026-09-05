@@ -403,5 +403,20 @@ The author is not responsible for damage, service disruption, misuse, or other c
 Use the software only in environments where you have appropriate authorization.
 
 ---
+# Credits
 
+<p align="center">
+  <b>Developed by Aashu</b><br/><br/>
+  <a href="https://t.me/outwiles">
+    <img src="https://img.shields.io/badge/Telegram-@outwiles-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
+  </a>
+  <a href="https://github.com/outwiles">
+    <img src="https://img.shields.io/badge/GitHub-@outwiles-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="mailto:outwiles@proton.me">
+    <img src="https://img.shields.io/badge/Mail-outwiles%40proton.me-D14836?style=for-the-badge&logo=protonmail&logoColor=white" alt="Mail" />
+  </a>
+</p>
+
+---
 
