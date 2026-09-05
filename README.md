@@ -1,4 +1,6 @@
-<div align="center"><img src="assets/bomb.jpg" alt="SMS Bomber" width="180">SMS Bomber
+<div align="center"><img src="assets/bomb.jpg" alt="SMS Bomber" width="180">
+  
+# SMS Bomber
 
 High-Concurrency SMS / OTP Request Testing Tool
 
