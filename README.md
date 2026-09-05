@@ -1,7 +1,8 @@
-#📱 SMS/OTP Bomber
+```markdown
+# 📱 SMS/OTP Bomber
 
 <div align="center">
-  <img src="sms-bomber/assets/bomb.png" alt="SMS Bomber Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/outwiles/sms-bomber/main/assets/bomb.jpg" alt="SMS Bomber Logo" width="200"/>
   <br>
   <p><strong>A lightweight, multi‑threaded SMS & voice OTP bomber with real‑time logging and intelligent rate‑limiting.</strong></p>
   <p>
@@ -13,36 +14,36 @@
 
 ---
 
-📌 Disclaimer
+## 📌 Disclaimer
 
-This tool is intended for authorised security testing and educational purposes only.
-The author is not responsible for any misuse. Always obtain proper permission before testing any service.
-Use at your own risk.
-
----
-
-✨ Features
-
-· ⚡ 500 concurrent threads (adjustable)
-· 🔄 Random User‑Agent rotation to avoid detection
-· 🛡️ Automatic cooldown on rate‑limits (429) and HTTP errors (4xx)
-· 📊 Real‑time logs – timestamp, URL, status code
-· 📈 Live stats – sent/failed/rate‑limited counters
-· 🛠️ Fully customisable – easily add/remove endpoints
-· 🖥️ Cross‑platform – Termux, Linux, macOS, Windows
+> **This tool is intended for authorised security testing and educational purposes only.**  
+> The author is not responsible for any misuse. Always obtain proper permission before testing any service.  
+> Use at your own risk.
 
 ---
 
-📦 Requirements
+## ✨ Features
 
-· Python 3.6 or higher
-· Internet connection
+- ⚡ **500 concurrent threads** (adjustable)
+- 🔄 **Random User‑Agent rotation** to avoid detection
+- 🛡️ **Automatic cooldown** on rate‑limits (429) and HTTP errors (4xx)
+- 📊 **Real‑time logs** – timestamp, URL, status code
+- 📈 **Live stats** – sent/failed/rate‑limited counters
+- 🛠️ **Fully customisable** – easily add/remove endpoints
+- 🖥️ **Cross‑platform** – Termux, Linux, macOS, Windows
 
 ---
 
-🔧 Installation
+## 📦 Requirements
 
-📱 Termux (Android)
+- Python 3.6 or higher
+- Internet connection
+
+---
+
+## 🔧 Installation
+
+### 📱 Termux (Android)
 
 ```bash
 pkg update && pkg upgrade
@@ -164,9 +165,8 @@ sms-bomber/
 ├── bomber.py              # Main script
 ├── requirements.txt       # Python dependencies
 ├── README.md              # This file
-└── bomb/
-    └── assets/
-        └── bomb.png       # Logo
+└── assets/
+    └── bomb.jpg           # Logo
 ```
 
 ---
@@ -180,7 +180,7 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 🙏 Credits
 
 · Author: @outwiles
-· Logo: Included in bomb/assets/
+· Logo: assets/bomb.jpg
 
 ---
 
@@ -191,3 +191,5 @@ If you find this tool useful, please star the repository and share it responsibl
 ---
 
 Happy testing! 🔥
+
+```
