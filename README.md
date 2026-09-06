@@ -1,16 +1,15 @@
+
 <div align="center">
 
-<img src="assets/bomb.jpg" alt="CurlToCode" width="520">
+<img src="assets/bomb.jpg" alt="SMS Bomber" width="180">
 
-# CurlToCode
+# SMS Bomber
 
-### Universal cURL-to-Code Converter
-
-Convert cURL commands into clean, ready-to-use code across **32 languages and request formats**.
+### High-Concurrency SMS / Voice OTP Testing Tool
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Android-lightgrey?style=for-the-badge)](#installation)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Termux-lightgrey?style=for-the-badge)](#installation)
 
 </div>
 
@@ -18,262 +17,506 @@ Convert cURL commands into clean, ready-to-use code across **32 languages and re
 
 ## Overview
 
-**CurlToCode** is a lightweight command-line cURL-to-code converter. Paste a cURL command, select a target, and CurlToCode generates an equivalent request in the selected language or format.
+**SMS Bomber** is a lightweight Python-based high-concurrency SMS/voice OTP request testing utility.
 
-It parses common request components including:
+The project is designed for authorized security research, development, endpoint testing, rate-limit evaluation, and controlled load testing.
 
-- HTTP method
-- URL
-- Query parameters
-- Headers
-- Cookies
-- Authentication headers
-- Form data
-- Request bodies
+### Features
 
-Everything is processed locally. CurlToCode does not require a hosted conversion service.
-
-## Features
-
-- Interactive terminal interface
-- 32 output targets
-- cURL command parsing
-- HTTP method and URL extraction
-- Header handling
-- Cookie handling
-- Authentication handling
-- Form-data and request-body support
-- Local processing
+- High-concurrency request handling
+- Real-time terminal statistics
+- Automatic cooldown handling
+- Rotating User-Agent support
+- Customizable endpoint configuration
 - Lightweight Python implementation
-- Cross-platform design
-- Works with Windows, Linux, macOS, Termux and Android Python environments
+- Cross-platform support
+- Simple command-line interface
 
-## Supported Output Targets
+---
 
-| # | Target |
-|---:|---|
-| 1 | Python Requests |
-| 2 | Python `http.client` |
-| 3 | Python Requests |
-| 4 | Go `net/http` |
-| 5 | Ruby Net::HTTP |
-| 6 | PHP Guzzle |
-| 7 | PHP cURL |
-| 8 | C# HttpClient |
-| 9 | Java HttpClient |
-| 10 | Node.js `http` |
-| 11 | JavaScript Axios |
-| 12 | JavaScript Fetch |
-| 13 | TypeScript Fetch |
-| 14 | Python aiohttp |
-| 15 | Elixir Req |
-| 16 | JavaScript jQuery |
-| 17 | Java OkHttp |
-| 18 | C# RestSharp |
-| 19 | C++ libcurl |
-| 20 | C libcurl |
-| 21 | Rust reqwest |
-| 22 | Kotlin OkHttp |
-| 23 | Swift URLSession |
-| 24 | Dart http |
-| 25 | R httr2 |
-| 26 | Lua LuaSocket |
-| 27 | Perl HTTP::Tiny |
-| 28 | PowerShell |
-| 29 | Wget |
-| 30 | Bash curl |
-| 31 | Raw HTTP |
-| 32 | JSON |
+## Supported Platforms
+
+| Platform | Support |
+|---|:---:|
+| Windows 10 / 11 | ✅ |
+| macOS | ✅ |
+| Linux | ✅ |
+| Ubuntu / Debian | ✅ |
+| Fedora | ✅ |
+| Arch Linux | ✅ |
+| WSL | ✅ |
+
+---
+
+# Installation
 
 ## Requirements
 
 - Python 3.9 or newer
-- pip
-- Git is recommended for cloning
-- A terminal for the full interactive experience
+- Git
+- Internet connection for installing Python packages
 
-## Installation
+Check Python:
+
+```bash
+python --version
+```
+
+On systems where `python` points to Python 2 or is unavailable:
+
+```bash
+python3 --version
+```
+
+---
+
+## Windows
+
+### 1. Clone the repository
+
+Open PowerShell or Command Prompt:
+
+```powershell
+git clone https://github.com/outwiles/sms-bomber.git
+cd sms-bomber
+```
+
+### 2. Create a virtual environment
+
+```powershell
+python -m venv .venv
+```
+
+### 3. Activate it
+
+```powershell
+.venv\Scripts\activate
+```
+
+### 4. Install dependencies
+
+```powershell
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 5. Start the program
+
+```powershell
+python bomb.py
+```
+
+---
+
+# macOS
+
+### 1. Clone
+
+```bash
+git clone https://github.com/outwiles/sms-bomber.git
+cd sms-bomber
+```
+
+### 2. Create a virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+### 3. Activate it
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Install dependencies
+
+```bash
+python3 -m pip install --upgrade pip
+pip3 install -r requirements.txt
+```
+
+### 5. Start
+
+```bash
+python3 bomb.py
+```
+
+---
+
+# Linux
+
+### 1. Clone
+
+```bash
+git clone https://github.com/outwiles/sms-bomber.git
+cd sms-bomber
+```
+
+### 2. Create a virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+### 3. Activate it
+
+```bash
+source .venv/bin/activate
+```
+
+### 4. Install dependencies
+
+```bash
+python3 -m pip install --upgrade pip
+pip3 install -r requirements.txt
+```
+
+### 5. Start
+
+```bash
+python3 bomb.py
+```
+
+### Debian / Ubuntu
+
+If Python, Git, or `venv` is missing:
+
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv git
+```
+
+Then follow the Linux installation steps.
+
+---
+
+# Termux
+
+### 1. Update Termux packages
+
+```bash
+pkg update && pkg upgrade
+```
+
+### 2. Install Python and Git
+
+```bash
+pkg install python git
+```
+
+### 3. Clone the repository
+
+```bash
+git clone https://github.com/outwiles/sms-bomber.git
+cd sms-bomber
+```
+
+### 4. Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 5. Start the program
+
+```bash
+python bomb.py
+```
+
+### Termux Notes
+
+If the repository is stored in shared Android storage, grant Termux storage access with:
+
+```bash
+termux-setup-storage
+```
+
+Run the project from its cloned directory and keep Termux open while performing an authorized test.
+
+---
+
+# Dependencies
+
+Dependencies are listed in `requirements.txt`.
+
+Current project dependencies include:
+
+```text
+requests
+fake-useragent
+cfonts
+```
+
+Install them with:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+---
+
+# Project Structure
+
+```text
+sms-bomber/
+│
+├── assets/
+│   └── bomb.jpg
+│
+├── bomb.py
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+
+| File / Directory | Description |
+|---|---|
+| `bomb.py` | Main application |
+| `requirements.txt` | Python dependencies |
+| `assets/bomb.jpg` | Project logo / branding |
+| `LICENSE` | MIT License |
+| `README.md` | Documentation |
+
+---
+
+# Usage
+
+Start the application from the project directory.
 
 ### Windows
 
 ```powershell
-git clone https://github.com/outwiles/CurltoCode.git
-cd CurltoCode
-py -m pip install -r requirements.txt
-py main.py
+python bomb.py
 ```
 
-If `py` is unavailable:
+### macOS / Linux
+
+```bash
+python3 bomb.py
+```
+
+The application provides its interactive terminal interface and runtime statistics.
+
+Only use request-generation functionality against systems and endpoints that you own or have explicit authorization to test.
+
+---
+
+# Virtual Environment
+
+A virtual environment keeps the project's dependencies isolated.
+
+### Create
+
+```bash
+python -m venv .venv
+```
+
+### Windows
 
 ```powershell
-python -m pip install -r requirements.txt
-python main.py
+.venv\Scripts\activate
 ```
 
-### Linux
+### macOS / Linux
 
 ```bash
-git clone https://github.com/outwiles/CurltoCode.git
-cd CurltoCode
-python3 -m pip install -r requirements.txt
-python3 main.py
+source .venv/bin/activate
 ```
 
-### macOS
+### Install
 
 ```bash
-git clone https://github.com/outwiles/CurltoCode.git
-cd CurltoCode
-python3 -m pip install -r requirements.txt
-python3 main.py
+pip install -r requirements.txt
 ```
 
-### Termux
+### Deactivate
 
 ```bash
-pkg update
-pkg install python git
-git clone https://github.com/outwiles/CurltoCode.git
-cd CurltoCode
-python -m pip install -r requirements.txt
-python main.py
+deactivate
 ```
 
-### Android / PyDroid
+---
 
-Install Python through your Android Python environment, then copy or clone the project.
+# Troubleshooting
 
-```bash
-python -m pip install -r requirements.txt
-python main.py
-```
+## `python` is not recognized on Windows
 
-The converter logic is standard Python. Terminal-specific visual effects can vary depending on the Android terminal environment.
-
-## Usage
-
-Start CurlToCode:
-
-```bash
-python main.py
-```
-
-On macOS or Linux:
-
-```bash
-python3 main.py
-```
-
-Choose the desired output target and provide a cURL command.
-
-Example:
-
-```bash
-curl 'https://example.com/api' -H 'Accept: application/json' -H 'Authorization: Bearer TOKEN' -d 'name=Aashu'
-```
-
-CurlToCode parses the request and generates the corresponding code for the selected target.
-
-## How It Works
-
-1. The cURL command is parsed into its individual components.
-2. The request data is normalized into an internal structure.
-3. The selected generator converts that structure into the requested language or format.
-4. The generated result is displayed locally in the terminal.
-
-No remote conversion server is required.
-
-## Project Structure
-
-```text
-CurlToCode/
-├── assets/
-│   └── logo.png
-├── curl_to_code/
-│   ├── __init__.py
-│   ├── core.py
-│   └── generators.py
-├── main.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
-## Dependencies
-
-Dependencies are listed in `requirements.txt`.
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-On macOS/Linux:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-## Troubleshooting
-
-### `ModuleNotFoundError`
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-### Python is not recognized on Windows
+Try:
 
 ```powershell
 py --version
-py -m pip install -r requirements.txt
-py main.py
 ```
 
-### `cfonts` is missing
+Then:
+
+```powershell
+py -m pip install -r requirements.txt
+py bomb.py
+```
+
+If Python is not installed, install it from:
+
+https://www.python.org/downloads/
+
+---
+
+## `pip` is not recognized
+
+Use:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### Terminal styling looks different
+or:
 
-Terminal rendering depends on the terminal emulator and operating system. ANSI styling and cfonts output may appear slightly different between terminals while the converter itself remains usable.
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-## Security and Privacy
+---
 
-CurlToCode processes the supplied cURL command locally.
+## `ModuleNotFoundError`
 
-Be careful when sharing cURL commands or generated code containing:
+Reinstall the dependencies:
 
-- API keys
-- Bearer tokens
-- Session cookies
-- Passwords
-- Private URLs
-- Other credentials
+```bash
+pip install -r requirements.txt
+```
 
-Remove or replace sensitive values before publishing commands or generated output.
+If you are using Python 3:
 
-## License
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-CurlToCode is released under the **MIT License**.
+---
+
+## `fake_useragent` errors
+
+Update the package:
+
+```bash
+pip install --upgrade fake-useragent
+```
+
+---
+
+## Permission errors on Linux or macOS
+
+Use a virtual environment instead of installing packages globally:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+---
+
+# Responsible Use
+
+This project can generate repeated requests and must be used responsibly.
+
+Use it only for:
+
+- Your own applications
+- Local development environments
+- Staging environments
+- Authorized penetration testing
+- Authorized load testing
+- Security research with permission
+
+Do not use it to disrupt third-party services, repeatedly trigger messages to people without consent, bypass provider protections, or interfere with telecommunications infrastructure.
+
+You are responsible for complying with applicable laws, regulations, provider policies, and authorization requirements.
+
+---
+
+# Credits
+
+## Author
+
+**outwiles**
+
+GitHub:
+
+https://github.com/outwiles
+
+Repository:
+
+https://github.com/outwiles/sms-bomber
+
+## Open-Source Libraries
+
+This project uses:
+
+- [Requests](https://github.com/psf/requests) — HTTP requests
+- [fake-useragent](https://github.com/fake-useragent/fake-useragent) — User-Agent generation
+- [cfonts](https://github.com/dominikwilkowski/cfonts) — Terminal text rendering
+
+Full dependency information is available in `requirements.txt`.
+
+---
+
+# Contributing
+
+Contributions are welcome for legitimate testing, research, reliability, and defensive-security improvements.
+
+To contribute:
+
+```bash
+git clone https://github.com/outwiles/sms-bomber.git
+cd sms-bomber
+```
+
+Create your changes, test them locally, and open a pull request.
+
+Useful contribution areas include:
+
+- Improved error handling
+- Better reporting
+- Safer testing modes
+- Mock SMS providers
+- Performance improvements
+- Cross-platform compatibility
+- Documentation
+- Defensive rate-limit testing
+
+---
+
+# License
+
+This project is licensed under the **MIT License**.
 
 See [`LICENSE`](LICENSE) for the complete license text.
 
-## Credits
+Copyright © 2026 **outwiles**
 
-### Author
+---
 
-**Aashu**
+# Disclaimer
 
-GitHub: [@outwiles](https://github.com/outwiles)
+This software is provided **"as is"**, without warranty of any kind.
 
-Repository: [CurlToCode](https://github.com/outwiles/CurltoCode)
+The author is not responsible for damage, service disruption, misuse, or other consequences resulting from use of this software.
+
+Use the software only in environments where you have appropriate authorization.
 
 ---
 
 <div align="center">
 
-**CurlToCode — Turn cURL into code.**
+### Built by outwiles
+
+⭐ Star the repository if you find it useful for legitimate testing and research.
 
 </div>
