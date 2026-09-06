@@ -1,4 +1,3 @@
-
 <div align="center">
 
 <img src="assets/bomb.jpg" alt="SMS Bomber" width="180">
@@ -41,6 +40,7 @@ The project is designed for authorized security research, development, endpoint 
 | Windows 10 / 11 | ✅ |
 | macOS | ✅ |
 | Linux | ✅ |
+| Termux | ✅ |
 | Ubuntu / Debian | ✅ |
 | Fedora | ✅ |
 | Arch Linux | ✅ |
