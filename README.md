@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/bomb.png" alt="CurlToCode" width="520">
+<img src="assets/bomb.jpg" alt="CurlToCode" width="520">
 
 # CurlToCode
 
